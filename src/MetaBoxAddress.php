@@ -74,9 +74,9 @@ class MetaBoxAddress extends MetaBox
 
             <?php if (apply_filters('wp-meta-box-address/country-' . $post->post_type, true ) ) { ?>
                 <tr>
-                    <th><label for="wp-meta-box-address-country"><?php _e( 'URL', 'wp-meta-box-address' ) ?></label></th>
+                    <th><label for="wp-meta-box-address-country"><?php _e( 'Country', 'wp-meta-box-address' ) ?></label></th>
                     <td>
-                        <input class="regular-text" type="text" name="wp-meta-box-address-country" id="wp-meta-box-address-country" value="<?= esc_attr($country) ?>">
+                        <input class="regular-text" type="text" name="wp-meta-box-address-country" id="wp-meta-box-address-country" value="<?= esc_attr($country) ?>" list="countries">
                         <datalist id="countries">
                             <option><?php _e( 'Albania', 'wp-meta-box-address' ) ?></option>
                             <option><?php _e( 'Algeria', 'wp-meta-box-address' ) ?></option>
@@ -189,7 +189,7 @@ class MetaBoxAddress extends MetaBox
                 <tr>
                     <th><?php _e('Preview', 'wp-meta-box-address') ?></th>
                     <td>
-                        <iframe class="wp-meta-box-address-map" src="http://maps.google.de/maps?q=<?= urlencode($address) ?>&amp;output=embed"></iframe>
+                        <iframe class="wp-meta-box-address-map" style="height: 400px; width: 100%;" src="https://maps.google.de/maps?q=<?= urlencode($address) ?>&amp;output=embed"></iframe>
                     </td>
                 </tr>
                 <?php
