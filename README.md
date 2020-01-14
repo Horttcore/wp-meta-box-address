@@ -73,6 +73,7 @@ add_filter('wp-meta-box-address/country-post', '__return_false');
 - Fix translation loading
 - Geocode address
 - Template tags
+- Views
 
 ## Changelog
 

@@ -39,36 +39,36 @@ class MetaBoxAddress extends MetaBox
 
             <?php if (apply_filters('wp-meta-box-address/street-' . $post->post_type, true ) ) { ?>
                 <tr>
-                    <th><label for="wp-meta-box-address-street"><?php _e( 'Phone', 'wp-meta-box-address' ) ?></label></th>
-                    <td><input type="text" name="wp-meta-box-address-street" id="wp-meta-box-address-street" value="<?= esc_attr($street) ?>"></td>
+                    <th><label for="wp-meta-box-address-street"><?php _e( 'Street', 'wp-meta-box-address' ) ?></label></th>
+                    <td><input class="regular-text" type="text" name="wp-meta-box-address-street" id="wp-meta-box-address-street" value="<?= esc_attr($street) ?>"></td>
                 </tr>
             <?php } ?>
 
             <?php if (apply_filters('wp-meta-box-address/streetnumber-' . $post->post_type, true ) ) { ?>
                 <tr>
-                    <th><label for="wp-meta-box-address-streetnumber"><?php _e( 'Fax', 'wp-meta-box-address' ) ?></label></th>
-                    <td><input type="text" name="wp-meta-box-address-streetnumber" id="wp-meta-box-address-streetnumber" value="<?= esc_attr($streetnumber) ?>"></td>
+                    <th><label for="wp-meta-box-address-streetnumber"><?php _e( 'Number', 'wp-meta-box-address' ) ?></label></th>
+                    <td><input class="regular-text" type="text" name="wp-meta-box-address-streetnumber" id="wp-meta-box-address-streetnumber" value="<?= esc_attr($streetnumber) ?>"></td>
                 </tr>
             <?php } ?>
 
             <?php if (apply_filters('wp-meta-box-address/address-additional-' . $post->post_type, true ) ) { ?>
                 <tr>
                     <th><label for="wp-meta-box-address-additional"><?php _e( 'Address additional', 'wp-meta-box-address' ) ?></label></th>
-                    <td><input type="text" name="wp-meta-box-address-additional" id="wp-meta-box-address-additional" value="<?= esc_attr($addressAdditional) ?>"></td>
+                    <td><input class="regular-text" type="text" name="wp-meta-box-address-additional" id="wp-meta-box-address-additional" value="<?= esc_attr($addressAdditional) ?>"></td>
                 </tr>
             <?php } ?>
 
             <?php if (apply_filters('wp-meta-box-address/zip-' . $post->post_type, true ) ) { ?>
                 <tr>
-                    <th><label for="wp-meta-box-address-zip"><?php _e( 'Mobile', 'wp-meta-box-address' ) ?></label></th>
-                    <td><input type="text" name="wp-meta-box-address-zip" id="wp-meta-box-address-zip" value="<?= esc_attr($zip) ?>"></td>
+                    <th><label for="wp-meta-box-address-zip"><?php _e( 'ZIP Code', 'wp-meta-box-address' ) ?></label></th>
+                    <td><input class="regular-text" type="text" name="wp-meta-box-address-zip" id="wp-meta-box-address-zip" value="<?= esc_attr($zip) ?>"></td>
                 </tr>
             <?php } ?>
 
             <?php if (apply_filters('wp-meta-box-address/city-' . $post->post_type, true ) ) { ?>
                 <tr>
-                    <th><label for="wp-meta-box-address-city"><?php _e( 'E-Mail', 'wp-meta-box-address' ) ?></label></th>
-                    <td><input type="city" name="wp-meta-box-address-city" id="wp-meta-box-address-city" value="<?= esc_attr($city) ?>"></td>
+                    <th><label for="wp-meta-box-address-city"><?php _e( 'City', 'wp-meta-box-address' ) ?></label></th>
+                    <td><input class="regular-text" type="text" name="wp-meta-box-address-city" id="wp-meta-box-address-city" value="<?= esc_attr($city) ?>"></td>
                 </tr>
             <?php } ?>
 
@@ -76,7 +76,7 @@ class MetaBoxAddress extends MetaBox
                 <tr>
                     <th><label for="wp-meta-box-address-country"><?php _e( 'URL', 'wp-meta-box-address' ) ?></label></th>
                     <td>
-                        <input type="country" name="wp-meta-box-address-country" id="wp-meta-box-address-country" value="<?= esc_attr($country) ?>">
+                        <input class="regular-text" type="text" name="wp-meta-box-address-country" id="wp-meta-box-address-country" value="<?= esc_attr($country) ?>">
                         <datalist id="countries">
                             <option><?php _e( 'Albania', 'wp-meta-box-address' ) ?></option>
                             <option><?php _e( 'Algeria', 'wp-meta-box-address' ) ?></option>
