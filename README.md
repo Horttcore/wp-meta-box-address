@@ -74,6 +74,7 @@ add_filter('wp-meta-box-address/country-post', '__return_false');
 - Geocode address
 - Template tags
 - Views
+- Blocks
 
 ## Changelog
 
