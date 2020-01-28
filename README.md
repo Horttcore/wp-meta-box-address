@@ -54,6 +54,8 @@ use RalfHortt\MetaBoxAddress\MetaBoxAddress;
 - `wp-meta-box-address/zip-{$postType}` - Hide zip field for \$postType
 - `wp-meta-box-address/city-{$postType}` - Hide city field for \$postType
 - `wp-meta-box-address/country-{$postType}` - Hide country field for \$postType
+- `wp-meta-box-address/latitude-{$postType}` - Hide latitude field for \$postType
+- `wp-meta-box-address/longitude-{$postType}` - Hide longitude field for \$postType
 
 #### Example
 
@@ -77,6 +79,11 @@ add_filter('wp-meta-box-address/country-post', '__return_false');
 - Blocks
 
 ## Changelog
+
+### v1.1.0 - 2020-01-28
+
+- Adding latitude meta field
+- Adding longitude meta field
 
 ### v1.0.0 - 2020-01-14
 
