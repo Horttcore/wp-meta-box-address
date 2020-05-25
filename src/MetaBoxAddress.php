@@ -1,4 +1,5 @@
 <?php
+
 namespace RalfHortt\MetaBoxAddress;
 
 use Horttcore\MetaBoxes\MetaBox;
@@ -37,42 +38,42 @@ class MetaBoxAddress extends MetaBox
 
             <?php do_action('wp-meta-box-address/before') ?>
 
-            <?php if (apply_filters('wp-meta-box-address/street-' . $post->post_type, true)) { ?>
+            <?php if (apply_filters('wp-meta-box-address/street-'.$post->post_type, true)) { ?>
                 <tr>
                     <th><label for="wp-meta-box-address-street"><?php _e('Street', 'wp-meta-box-address') ?></label></th>
                     <td><input class="regular-text" type="text" name="wp-meta-box-address-street" id="wp-meta-box-address-street" value="<?= esc_attr($street) ?>"></td>
                 </tr>
             <?php } ?>
 
-            <?php if (apply_filters('wp-meta-box-address/streetnumber-' . $post->post_type, true)) { ?>
+            <?php if (apply_filters('wp-meta-box-address/streetnumber-'.$post->post_type, true)) { ?>
                 <tr>
                     <th><label for="wp-meta-box-address-streetnumber"><?php _e('Number', 'wp-meta-box-address') ?></label></th>
                     <td><input class="regular-text" type="text" name="wp-meta-box-address-streetnumber" id="wp-meta-box-address-streetnumber" value="<?= esc_attr($streetnumber) ?>"></td>
                 </tr>
             <?php } ?>
 
-            <?php if (apply_filters('wp-meta-box-address/address-additional-' . $post->post_type, true)) { ?>
+            <?php if (apply_filters('wp-meta-box-address/address-additional-'.$post->post_type, true)) { ?>
                 <tr>
                     <th><label for="wp-meta-box-address-additional"><?php _e('Address additional', 'wp-meta-box-address') ?></label></th>
                     <td><input class="regular-text" type="text" name="wp-meta-box-address-additional" id="wp-meta-box-address-additional" value="<?= esc_attr($addressAdditional) ?>"></td>
                 </tr>
             <?php } ?>
 
-            <?php if (apply_filters('wp-meta-box-address/zip-' . $post->post_type, true)) { ?>
+            <?php if (apply_filters('wp-meta-box-address/zip-'.$post->post_type, true)) { ?>
                 <tr>
                     <th><label for="wp-meta-box-address-zip"><?php _e('ZIP Code', 'wp-meta-box-address') ?></label></th>
                     <td><input class="regular-text" type="text" name="wp-meta-box-address-zip" id="wp-meta-box-address-zip" value="<?= esc_attr($zip) ?>"></td>
                 </tr>
             <?php } ?>
 
-            <?php if (apply_filters('wp-meta-box-address/city-' . $post->post_type, true)) { ?>
+            <?php if (apply_filters('wp-meta-box-address/city-'.$post->post_type, true)) { ?>
                 <tr>
                     <th><label for="wp-meta-box-address-city"><?php _e('City', 'wp-meta-box-address') ?></label></th>
                     <td><input class="regular-text" type="text" name="wp-meta-box-address-city" id="wp-meta-box-address-city" value="<?= esc_attr($city) ?>"></td>
                 </tr>
             <?php } ?>
 
-            <?php if (apply_filters('wp-meta-box-address/country-' . $post->post_type, true)) { ?>
+            <?php if (apply_filters('wp-meta-box-address/country-'.$post->post_type, true)) { ?>
                 <tr>
                     <th><label for="wp-meta-box-address-country"><?php _e('Country', 'wp-meta-box-address') ?></label></th>
                     <td>
@@ -184,14 +185,14 @@ class MetaBoxAddress extends MetaBox
                 </tr>
             <?php } ?>
 
-            <?php if (apply_filters('wp-meta-box-address/latitude-' . $post->post_type, true)) { ?>
+            <?php if (apply_filters('wp-meta-box-address/latitude-'.$post->post_type, true)) { ?>
                 <tr>
                     <th><label for="wp-meta-box-address-latitude"><?php _e('Latitude', 'wp-meta-box-address') ?></label></th>
                     <td><input class="regular-text" type="text" name="wp-meta-box-address-latitude" id="wp-meta-box-address-latitude" value="<?= esc_attr($latitude) ?>"></td>
                 </tr>
             <?php } ?>
 
-            <?php if (apply_filters('wp-meta-box-address/longitude-' . $post->post_type, true)) { ?>
+            <?php if (apply_filters('wp-meta-box-address/longitude-'.$post->post_type, true)) { ?>
                 <tr>
                     <th><label for="wp-meta-box-address-longitude"><?php _e('Longitude', 'wp-meta-box-address') ?></label></th>
                     <td><input class="regular-text" type="text" name="wp-meta-box-address-longitude" id="wp-meta-box-address-longitude" value="<?= esc_attr($longitude) ?>"></td>
@@ -199,7 +200,7 @@ class MetaBoxAddress extends MetaBox
             <?php } ?>
 
             <?php
-            if (apply_filters('wp-meta-box-address/map-' . $post->post_type, true)) {
+            if (apply_filters('wp-meta-box-address/map-'.$post->post_type, true)) {
                 ?>
                 <tr>
                     <th><?php _e('Preview', 'wp-meta-box-address') ?></th>
@@ -218,35 +219,35 @@ class MetaBoxAddress extends MetaBox
 
     public function save(int $postId): void
     {
-        if (apply_filters('wp-meta-box-address/street-' . $post->post_type, true)) {
+        if (apply_filters('wp-meta-box-address/street-'.$post->post_type, true)) {
             update_post_meta($postId, '_address-street', sanitize_text_field($_POST['wp-meta-box-address-street']));
         }
 
-        if (apply_filters('wp-meta-box-address/streetnumber-' . $post->post_type, true)) {
+        if (apply_filters('wp-meta-box-address/streetnumber-'.$post->post_type, true)) {
             update_post_meta($postId, '_address-streetnumber', sanitize_text_field($_POST['wp-meta-box-address-streetnumber']));
         }
 
-        if (apply_filters('wp-meta-box-address/address-additional-' . $post->post_type, true)) {
+        if (apply_filters('wp-meta-box-address/address-additional-'.$post->post_type, true)) {
             update_post_meta($postId, '_address-additional', sanitize_text_field($_POST['wp-meta-box-address-additional']));
         }
 
-        if (apply_filters('wp-meta-box-address/zip-' . $post->post_type, true)) {
+        if (apply_filters('wp-meta-box-address/zip-'.$post->post_type, true)) {
             update_post_meta($postId, '_address-zip', sanitize_text_field($_POST['wp-meta-box-address-zip']));
         }
 
-        if (apply_filters('wp-meta-box-address/city-' . $post->post_type, true)) {
+        if (apply_filters('wp-meta-box-address/city-'.$post->post_type, true)) {
             update_post_meta($postId, '_address-city', sanitize_text_field($_POST['wp-meta-box-address-city']));
         }
 
-        if (apply_filters('wp-meta-box-address/country-' . $post->post_type, true)) {
+        if (apply_filters('wp-meta-box-address/country-'.$post->post_type, true)) {
             update_post_meta($postId, '_address-country', sanitize_text_field($_POST['wp-meta-box-address-country']));
         }
 
-        if (apply_filters('wp-meta-box-address/latitude-' . $post->post_type, true)) {
+        if (apply_filters('wp-meta-box-address/latitude-'.$post->post_type, true)) {
             update_post_meta($postId, '_address-latitude', sanitize_text_field($_POST['wp-meta-box-address-latitude']));
         }
 
-        if (apply_filters('wp-meta-box-address/longitude-' . $post->post_type, true)) {
+        if (apply_filters('wp-meta-box-address/longitude-'.$post->post_type, true)) {
             update_post_meta($postId, '_address-longitude', sanitize_text_field($_POST['wp-meta-box-address-longitude']));
         }
 
