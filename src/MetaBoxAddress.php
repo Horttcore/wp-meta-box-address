@@ -217,7 +217,7 @@ class MetaBoxAddress extends MetaBox
 		<?php
     }
 
-    public function save(int $postId): void
+    public function save(int $postId, \WP_Post $post, bool $update): void
     {
         if (apply_filters('wp-meta-box-address/street-'.$post->post_type, true)) {
             update_post_meta($postId, '_address-street', sanitize_text_field($_POST['wp-meta-box-address-street']));
