@@ -72,19 +72,22 @@ add_filter('wp-meta-box-address/country-post', '__return_false');
 
 ## ToDo
 
-- Fix translation loading
 - Geocode address
 - Template tags
-- Views
-- Blocks
 
 ## Changelog
 
-### v1.1.0 - 2020-01-28
+### 2.0 - 2020-11-06
+
+- Updating wp-meta-box dependency
+- Adding translation
+- Fix error in composer.json
+
+### 1.1.0 - 2020-01-28
 
 - Adding latitude meta field
 - Adding longitude meta field
 
-### v1.0.0 - 2020-01-14
+### 1.0.0 - 2020-01-14
 
 - Initial release
