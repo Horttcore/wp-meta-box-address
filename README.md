@@ -77,6 +77,11 @@ add_filter('wp-meta-box-address/country-post', '__return_false');
 
 ## Changelog
 
+
+### 2.1 - 2020-11-23
+
+- Updating wp-meta-box dependency
+
 ### 2.0 - 2020-11-06
 
 - Updating wp-meta-box dependency
