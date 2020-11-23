@@ -5,7 +5,7 @@
   "authors": [
     {
       "name": "Ralf Hortt",
-      "email": "me@horttcore.de"
+      "email": "mail@ralfhortt.dev"
     }
   ],
   "autoload": {
@@ -14,7 +14,7 @@
     }
   },
   "require": {
-    "ralfhortt/wp-meta-box": "^2.0.2",
+    "ralfhortt/wp-meta-box": "^3",
     "ralfhortt/translator-service": "^1.0"
   }
 }
